@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<body>
+<h1>Statuses</h1>
+
+<table border=1>
+    {% for result in results %}
+    <tr>
+        {% if loop.index0 == 0 %}
+        {% for key, _ in result.items() %}
+        <th> {{ key }}</th>
+        {% endfor %}
+        {% endif %}
+    </tr>
+    {% endfor %}
+
+
+    {% for result in results %}
+    <tr>
+        {% for key, value in result.items() %}
+        <th> {{ value }}</th>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
